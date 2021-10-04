@@ -1,0 +1,39 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "name": "Todoro",
+        "image": "https://p.kindpng.com/picc/s/700-7002998_transparent-totoro-icon-png-transparent-background-totoro-transparent.png",
+        "likes": "0",
+        "desc": "A forest spirit that resebmles a large cat/owl."
+      },
+      {
+        "id": 2,
+        "name": "Naruto",
+        "image": "https://www.kindpng.com/picc/m/2-28665_naruto-png-png-download-naruto-png-background-transparent.png",
+        "likes": "0",
+        "desc": "The hokage from the Hidden Leaf village."
+      },
+      {
+        "id": 3,
+        "name": "No face",
+        "image": "https://www.seekpng.com/png/detail/121-1210257_evil-doer-spirited-away-no-face.png",
+        "likes": "0",
+        "desc": "A spirit capable of reacting to emotions and ingesting individuals to gain their personality."
+      },
+      {
+        "id": 4,
+        "name": "Goku",
+        "image": "https://www.wallpaperflare.com/static/610/436/872/dragon-ball-anime-son-goku-white-background-wallpaper.jpg",
+        "likes": "0",
+        "desc": "A saiyan from planet Vegeta that punches things."
+      },
+      {
+        "id": 5,
+        "name": "Ein",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
+        "likes": "0",
+        "desc": "A corgi that had his intelligence enhanced in a research facility."
+      }
+    ]
+  }
