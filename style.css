@@ -7,7 +7,14 @@
 #image-line img {
     flex: 0 1 auto;
     height: 150px;
-    margin-right: 0.5rem;
+    margin-right: 0.9rem;
+    border: 3px solid;
+}
+#image-line h2 {
+    flex: 0 1 auto;
+    text-align: center;
+
+    margin-right: 0.9rem;
     border: 3px solid;
 }
 #image-line img:last-child {
