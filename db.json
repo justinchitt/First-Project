@@ -2,7 +2,7 @@
   "characters": [
     {
       "id": 1,
-      "name": "Todoro",
+      "name": "Totoro",
       "image": "https://p.kindpng.com/picc/s/700-7002998_transparent-totoro-icon-png-transparent-background-totoro-transparent.png",
       "face": "https://wallpaperaccess.com/full/95379.jpg",
       "likes": "0",
@@ -48,5 +48,39 @@
       "desc": "Prince Vegeta from Vegeta",
       "id": 7
     }
+  ],
+  "maps": [
+    {
+      "id": 10,
+      "name": "Totoro's House",
+      "image": "https://i0.wp.com/www.geeksaresexy.net/wp-content/uploads/2020/04/totoro-house-01.jpg?fit=700%2C386&ssl=1&resize=1280%2C720",
+      "desc": "A house in the forest"
+    },
+    {
+      "id": 11,
+      "name": "Naruto's House",
+      "image": "https://preview.redd.it/iv6l2u2kb8t61.jpg?width=933&format=pjpg&auto=webp&s=ab3ec8036c719f4578d2188e8de3c1ec0391d70b",
+      "desc": "Prince Vegeta from Vegeta"
+    },
+    {
+      "id": 12,
+      "name": "The Bathhouse",
+      "image": "http://i.imgur.com/qQ4lXlo.jpg",
+      "desc": "A place only for spirits"
+    },
+    {
+      "id": 13,
+      "name": "Kami's House",
+      "image": "https://cdna.artstation.com/p/assets/images/images/026/339/178/large/paul-demetriou-kame-house-final-photoshop.jpg?1588520588",
+      "desc": "the home of Master Roshi"
+    },
+    {
+      "id": 14,
+      "name": "Inside the ship",
+      "image": "https://platform-production-assets-us-west-2.s3.amazonaws.com/uploads/hw/2020/12/2_2033104526-cowboybebop_126.jpg",
+      "desc": "Bepop"
+    }
+    
+
   ]
 }
