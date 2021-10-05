@@ -1,52 +1,52 @@
 {
-    "characters": [
-      {
-        "id": 1,
-        "name": "Todoro",
-        "image": "https://p.kindpng.com/picc/s/700-7002998_transparent-totoro-icon-png-transparent-background-totoro-transparent.png",
-        "face": "https://wallpaperaccess.com/full/95379.jpg",
-        "likes": "0",
-        "desc": "A forest spirit that resebmles a large cat/owl."
-      },
-      {
-        "id": 2,
-        "name": "Naruto",
-        "image": "https://www.kindpng.com/picc/m/2-28665_naruto-png-png-download-naruto-png-background-transparent.png",
-        "face": "https://wallpaperaccess.com/full/2866246.jpg",
-        "likes": "0",
-        "desc": "The hokage from the Hidden Leaf village."
-      },
-      {
-        "id": 3,
-        "name": "No face",
-        "image": "https://www.seekpng.com/png/detail/121-1210257_evil-doer-spirited-away-no-face.png",
-        "face": "https://www.kindpng.com/picc/m/57-578421_totoro-and-no-face-hd-png-download.png",
-        "likes": "0",
-        "desc": "A spirit capable of reacting to emotions and ingesting individuals to gain their personality."
-      },
-      {
-        "id": 4,
-        "name": "Goku",
-        "image": "https://www.wallpaperflare.com/static/610/436/872/dragon-ball-anime-son-goku-white-background-wallpaper.jpg",
-        "face": "https://www.pngitem.com/pimgs/m/286-2861864_agar-io-goku-skin-png-download-dragon-ball.png",
-        "likes": "0",
-        "desc": "A saiyan from planet Vegeta that punches things."
-      },
-      {
-        "id": 5,
-        "name": "Ein",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
-        "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
-        "likes": "0",
-        "desc": "A corgi that had his intelligence enhanced in a research facility."
-      },
-      {
-        "id": 6,
-        "name": "New Fighter",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
-        "face": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
-        "likes": "0",
-        "desc": "Create a new fighter, fighter must be leet."
-      }
-    ]
-  }
+  "characters": [
+    {
+      "id": 1,
+      "name": "Todoro",
+      "image": "https://p.kindpng.com/picc/s/700-7002998_transparent-totoro-icon-png-transparent-background-totoro-transparent.png",
+      "face": "https://wallpaperaccess.com/full/95379.jpg",
+      "likes": "0",
+      "desc": "A forest spirit that resebmles a large cat/owl."
+    },
+    {
+      "id": 2,
+      "name": "Naruto",
+      "image": "https://www.kindpng.com/picc/m/2-28665_naruto-png-png-download-naruto-png-background-transparent.png",
+      "face": "https://wallpaperaccess.com/full/2866246.jpg",
+      "likes": "0",
+      "desc": "The hokage from the Hidden Leaf village."
+    },
+    {
+      "id": 3,
+      "name": "No face",
+      "image": "https://www.seekpng.com/png/detail/121-1210257_evil-doer-spirited-away-no-face.png",
+      "face": "https://www.kindpng.com/picc/m/57-578421_totoro-and-no-face-hd-png-download.png",
+      "likes": "0",
+      "desc": "A spirit capable of reacting to emotions and ingesting individuals to gain their personality."
+    },
+    {
+      "id": 4,
+      "name": "Goku",
+      "image": "https://www.wallpaperflare.com/static/610/436/872/dragon-ball-anime-son-goku-white-background-wallpaper.jpg",
+      "face": "https://www.pngitem.com/pimgs/m/286-2861864_agar-io-goku-skin-png-download-dragon-ball.png",
+      "likes": "0",
+      "desc": "A saiyan from planet Vegeta that punches things."
+    },
+    {
+      "id": 5,
+      "name": "Ein",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
+      "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
+      "likes": "0",
+      "desc": "A corgi that had his intelligence enhanced in a research facility."
+    },
+    {
+      "id": 6,
+      "name": "New Fighter",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
+      "face": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
+      "likes": "0",
+      "desc": "Create a new fighter, fighter must be leet."
+    }
+  ]
+}

@@ -1,3 +1,19 @@
+body, html {
+    height: 100%;
+  }
+  
+#bg {
+    /* The image used */
+    background-image: url("https://pbs.twimg.com/media/C5nazjbWUAAcizG.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 #image-line-bottom {
     display: flex;
     overflow-x: auto;
@@ -73,7 +89,7 @@
 #favorite img {
     height: 350px;
     border: 3px solid;
-    margin-right: 20em;
+    margin-right: 10em;
     
 }
 
