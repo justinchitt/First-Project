@@ -22,7 +22,7 @@ function renderCharacterTop(character) {
     name.textContent = character.name
     imgChar.src = character.face
     let charCard = document.createElement('div')
-    charCard.style.borderRadius = "50%";
+    
     // let charCardBottom = document.createElement('div')
     charCard.addEventListener('mouseover', () => showDesc(character, charCard, descHolder, name))
     charCard.addEventListener('mouseout', () => hideDesc(descHolder, charCard, name))
@@ -101,6 +101,7 @@ function hideDesc(descHolder, charCard, name) {
 let form = document.querySelector('form')
 let newName = document.getElementById('name')
 let newImage = document.getElementById('image')
+let newFace = document.getElementById('face')
 let newDesc = document.getElementById('desc')
 
 function postCharacter() {
@@ -111,7 +112,7 @@ function postCharacter() {
     let newObj = {
         name: newName.value,
         image: newImage.value,
-        face: "something",
+        face: newFace.value,
         likes: "0",
         desc: newDesc.value
     }

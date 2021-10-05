@@ -41,12 +41,12 @@
       "desc": "A corgi that had his intelligence enhanced in a research facility."
     },
     {
-      "id": 6,
-      "name": "New Fighter",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
-      "face": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Question-mark-grey.jpg",
+      "name": "Vegeta",
+      "image": "https://c4.wallpaperflare.com/wallpaper/506/983/703/dragon-ball-dragon-ball-z-vegeta-dragon-ball-wallpaper-preview.jpg",
+      "face": "https://ih1.redbubble.net/image.1070861259.8846/pp,840x830-pad,1000x1000,f8f8f8.jpg",
       "likes": "0",
-      "desc": "Create a new fighter, fighter must be leet."
+      "desc": "Prince Vegeta from Vegeta",
+      "id": 7
     }
   ]
 }
