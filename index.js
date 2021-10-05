@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}; 
+
 const urlCharacters = "http://localhost:3000/characters"
 const urlMaps = "http://localhost:3000/maps"
 
@@ -24,23 +28,29 @@ function renderCharacterTop(character) {
     name.textContent = character.name
     imgChar.src = character.face
     let charCard = document.createElement('div')
-    
-    // let charCardBottom = document.createElement('div')
     charCard.addEventListener('mouseover', () => showDesc(character, charCard, descHolder, name))
     charCard.addEventListener('mouseout', () => hideDesc(descHolder, charCard, name))
     charCard.addEventListener('click',() => playerOneChoice(character))
-    charCard.style.border = "4px solid"
-    charCard.style.borderColor = "red"
-    charCard.addEventListener("click", (e) => changeBorder(e, charCard))
+    // charCard.style.borderColor = "red"
+    charCard.addEventListener("click", (e) => changeBorderOne(e, charCard))
     charCard.append(imgChar, name)
     charCard.style.backgroundColor = "#E9E7E7"
     document.getElementById('image-line').append(charCard)
     // document.getElementById('image-line-bottom').append(charCardBottom)
 }
 
-function changeBorder(e, charCard) {
+function changeBorderOne(e, charCard) {
     console.log(e.target)
-    charCard.style.borderColor = "green"
+    charCard.style.border = "8px solid"
+    charCard.style.borderColor = "red"
+    // e.target.parentNode.style.borderColor = "yellow"
+    
+}
+
+function changeBorderTwo(e, charCard) {
+    console.log(e.target)
+    charCard.style.border = "8px solid"
+    charCard.style.borderColor = "blue"
     // e.target.parentNode.style.borderColor = "yellow"
     
 }
@@ -63,6 +73,7 @@ function renderCharacterBottom(character) {
     charCard.addEventListener('mouseover', () => showDesc(character, charCard, descHolder, name))
     charCard.addEventListener('mouseout', () => hideDesc(descHolder, charCard, name))
     charCard.addEventListener('click',() => playerTwoChoice(character))
+    charCard.addEventListener("click", (e) => changeBorderTwo(e, charCard))
     charCard.append(imgChar, name)
     charCard.style.backgroundColor = "#E9E7E7"
     // document.getElementById('image-line').append(charCard)
@@ -85,13 +96,13 @@ function playerTwoChoice (character){
 function showDesc(character, charCard, descHolder, name) {
     // let desc = document.createElement('p')
     // desc = character.desc
-    let upBttn = document.createElement('button')
-    upBttn.textContent = '↑'
-    let downBttn = document.createElement('button')
-    downBttn.textContent = '↓'
+    // let upBttn = document.createElement('button')
+    // upBttn.textContent = '↑'
+    // let downBttn = document.createElement('button')
+    // downBttn.textContent = '↓'
     charCard.style.backgroundColor = 'yellow'
     name.style.backgroundColor = 'red'
-    descHolder.append(upBttn, downBttn)
+    // descHolder.append(upBttn, downBttn)
     charCard.append(descHolder)
 }
 
@@ -142,6 +153,11 @@ function postNewCharacter(object) {
 function start() {
     let bttn = document.createElement('button')
     bttn.textContent = 'START'
+    bttn.style.backgroundColor = 'transparent';
+    bttn.style.border = 'none';
+    bttn.style.fontSize = '500%';
+    bttn.style.fontFamily =  'Lucida Handwriting';
+    bttn.style.color = 'red';
     bttn.addEventListener('click', init)
     document.getElementById('bg').appendChild(bttn)
     
@@ -160,19 +176,72 @@ function getMaps() {
 function renderMaps(map, button) {
     let img = document.createElement('img')
     img.src = map.image
-    button.addEventListener('click', () => handleMap(img))
-    document.getElementById('map').append(button)
+    button.addEventListener('click', () => handleMap(img,button))
+    document.getElementById('ready-fightbtn').append(button)
 }
 
-function handleMap(img) {
-    img.addEventListener('click', handleSelect)
+function handleMap(img,button) {
+    img.addEventListener('click', (e) => handleSelect(e,button))
     document.getElementById('map').append(img)
 }
-function handleSelect(e) {
+function handleSelect(e,button) {
     let replace = document.getElementById("versus")
     replace.src = e.target.src
     let fightBttn = document.createElement('button')
     fightBttn.textContent = "FIGHT"
+    button.remove();
+    document.getElementById('ready-fightbtn').append(fightBttn)
+    fightBttn.addEventListener('click',startFight)
 }
+
+function startFight(){
+    document.getElementById('image-line').replaceChildren()
+    document.getElementById('image-line-bottom').replaceChildren()
+    document.getElementById('map').replaceChildren()
+    form.replaceChildren()
+    let arena = document.getElementById('versus').src
+    console.log(arena);
+    document.body.style.backgroundImage = `url(${arena})`;
+    document.getElementById('vsContainer').remove()
+    let combat = document.createElement('button');
+    combat.textContent = 'TUSSLE'
+    document.getElementById('combatbutton').append(combat);
+    combat.addEventListener('click', (combat) => tussle(combat))
+    // console.log
+
+    
+}
+
+function tussle(combat){
+    let playerOne = document.getElementById('playerOneName').textContent
+    let playerTwo = document.getElementById('playerTwoName').textContent
+
+    let prob1 = Math.floor(Math.random() * 2) +1;
+    console.log(prob1)
+    
+    let prob2 = Math.floor(Math.random() * 2) +1;
+    console.log(prob2)
+    
+    if( prob1 === prob2){
+        alert(`${playerOne} Won`);
+      }else{
+        alert(`${playerTwo} Won`);
+    }
+
+    let newGame = document.createElement('button');
+    newGame.textContent = 'START NEW GAME'; 
+    newGame.addEventListener('click',startNewGame)
+    document.getElementById('combatbutton').replaceChildren();
+    document.getElementById('combatbutton').append(newGame);
+    
+};
+
+function startNewGame(){
+    location.reload() 
+   
+}
+
+// tussle()
+
 
 start()
