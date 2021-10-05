@@ -37,10 +37,7 @@ body, html {
     text-align: center;
     margin-right: 0.9rem;
     border: 3px solid;
-    border-radius: 50%; 
-    
-    
-    
+
 }
 #image-line-bottom img:last-child {
     margin-right: 0;
@@ -70,7 +67,7 @@ body, html {
     text-align: center;
     margin-right: 0.9rem;
     border: 3px solid;
-    border-radius: 50%; 
+    
        
 }
 
@@ -79,7 +76,10 @@ body, html {
     
 }
 
-
+#versus {
+    border-radius: 50%;
+    
+}
 
 #favorite {
     position: relative;
