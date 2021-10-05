@@ -1,7 +1,9 @@
-const url = "http://localhost:3000/characters"
+const urlCharacters = "http://localhost:3000/characters"
+const urlMaps = "http://localhost:3000/maps"
 
 function init(e) {
-    getCharacters(url)
+    getCharacters(urlCharacters)
+    getMaps()
     postCharacter()
     e.target.parentNode.remove()
 }
@@ -127,7 +129,7 @@ function postCharacter() {
 
 function postNewCharacter(object) {
     console.log(object)
-    fetch(url, {
+    fetch(urlCharacters, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -144,6 +146,33 @@ function start() {
     document.getElementById('bg').appendChild(bttn)
     
 
+}
+
+function getMaps() {
+    fetch(urlMaps)
+    .then(resp => resp.json())
+    .then(maps =>{
+        let button = document.createElement('button')
+        button.textContent = "READY"
+     maps.forEach((map) => renderMaps(map, button))})
+}
+
+function renderMaps(map, button) {
+    let img = document.createElement('img')
+    img.src = map.image
+    button.addEventListener('click', () => handleMap(img))
+    document.getElementById('map').append(button)
+}
+
+function handleMap(img) {
+    img.addEventListener('click', handleSelect)
+    document.getElementById('map').append(img)
+}
+function handleSelect(e) {
+    let replace = document.getElementById("versus")
+    replace.src = e.target.src
+    let fightBttn = document.createElement('button')
+    fightBttn.textContent = "FIGHT"
 }
 
 start()
