@@ -1,8 +1,9 @@
 const url = "http://localhost:3000/characters"
 
-function init() {
+function init(e) {
     getCharacters(url)
-    // postCharacter()
+    postCharacter()
+    e.target.parentNode.remove()
 }
 
 function getCharacters(url) {
@@ -26,10 +27,20 @@ function renderCharacterTop(character) {
     charCard.addEventListener('mouseover', () => showDesc(character, charCard, descHolder, name))
     charCard.addEventListener('mouseout', () => hideDesc(descHolder, charCard, name))
     charCard.addEventListener('click',() => playerOneChoice(character))
+    charCard.style.border = "4px solid"
+    charCard.style.borderColor = "red"
+    charCard.addEventListener("click", (e) => changeBorder(e, charCard))
     charCard.append(imgChar, name)
     charCard.style.backgroundColor = "#E9E7E7"
     document.getElementById('image-line').append(charCard)
     // document.getElementById('image-line-bottom').append(charCardBottom)
+}
+
+function changeBorder(e, charCard) {
+    console.log(e.target)
+    charCard.style.borderColor = "green"
+    // e.target.parentNode.style.borderColor = "yellow"
+    
 }
 
 function playerOneChoice (character){
@@ -37,7 +48,6 @@ function playerOneChoice (character){
     document.getElementById('playerOneName').textContent = character.name;
     document.getElementById('playerOneDesc').textContent = character.desc;
     fighterOneImg.src = character.image
-   
 }
 
 function renderCharacterBottom(character) {
@@ -88,16 +98,51 @@ function hideDesc(descHolder, charCard, name) {
     charCard.style.backgroundColor = "#E9E7E7"
     name.style.backgroundColor = "#E9E7E7"
 }
+let form = document.querySelector('form')
+let newName = document.getElementById('name')
+let newImage = document.getElementById('image')
+let newDesc = document.getElementById('desc')
 
-// postCharacter = () => {
-//     let form = document.querySelector('form')
-//     form.addEventListener("submit",(e)=>
-//     e.preventDefault())
-
+function postCharacter() {
     
-//     let newName = document.getElementById('name').value;
-//     let newImage = document;
+    form.addEventListener("submit", (e)=> {
+    e.preventDefault()
 
-// }
+    let newObj = {
+        name: newName.value,
+        image: newImage.value,
+        face: "something",
+        likes: "0",
+        desc: newDesc.value
+    }
 
-init()
+    renderCharacterTop(newObj)
+    renderCharacterBottom(newObj)
+    postNewCharacter(newObj)
+    })
+    form.reset()
+}
+
+
+function postNewCharacter(object) {
+    console.log(object)
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(object)
+        })
+}
+
+
+function start() {
+    let bttn = document.createElement('button')
+    bttn.textContent = 'START'
+    bttn.addEventListener('click', init)
+    document.getElementById('bg').appendChild(bttn)
+    
+
+}
+
+start()
