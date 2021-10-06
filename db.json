@@ -5,7 +5,6 @@
       "name": "Totoro",
       "image": "https://p.kindpng.com/picc/s/700-7002998_transparent-totoro-icon-png-transparent-background-totoro-transparent.png",
       "face": "https://wallpaperaccess.com/full/95379.jpg",
-      "likes": "0",
       "desc": "A forest spirit that resebmles a large cat/owl."
     },
     {
@@ -13,7 +12,6 @@
       "name": "Naruto",
       "image": "https://www.kindpng.com/picc/m/2-28665_naruto-png-png-download-naruto-png-background-transparent.png",
       "face": "https://wallpaperaccess.com/full/2866246.jpg",
-      "likes": "0",
       "desc": "The hokage from the Hidden Leaf village."
     },
     {
@@ -21,7 +19,6 @@
       "name": "No face",
       "image": "https://www.seekpng.com/png/detail/121-1210257_evil-doer-spirited-away-no-face.png",
       "face": "https://www.kindpng.com/picc/m/57-578421_totoro-and-no-face-hd-png-download.png",
-      "likes": "0",
       "desc": "A spirit capable of reacting to emotions and ingesting individuals to gain their personality."
     },
     {
@@ -29,7 +26,6 @@
       "name": "Goku",
       "image": "https://www.wallpaperflare.com/static/610/436/872/dragon-ball-anime-son-goku-white-background-wallpaper.jpg",
       "face": "https://www.pngitem.com/pimgs/m/286-2861864_agar-io-goku-skin-png-download-dragon-ball.png",
-      "likes": "0",
       "desc": "A saiyan from planet Vegeta that punches things."
     },
     {
@@ -37,14 +33,12 @@
       "name": "Ein",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
       "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
-      "likes": "0",
       "desc": "A corgi that had his intelligence enhanced in a research facility."
     },
     {
       "name": "Vegeta",
       "image": "https://c4.wallpaperflare.com/wallpaper/506/983/703/dragon-ball-dragon-ball-z-vegeta-dragon-ball-wallpaper-preview.jpg",
       "face": "https://ih1.redbubble.net/image.1070861259.8846/pp,840x830-pad,1000x1000,f8f8f8.jpg",
-      "likes": "0",
       "desc": "Prince Vegeta from Vegeta",
       "id": 7
     }
@@ -80,7 +74,5 @@
       "image": "https://platform-production-assets-us-west-2.s3.amazonaws.com/uploads/hw/2020/12/2_2033104526-cowboybebop_126.jpg",
       "desc": "Bepop"
     }
-    
-
   ]
 }
