@@ -196,6 +196,10 @@ box-shadow: 10px 0px 15px 0px #000000;
 	top:1px;
 }
 
+#map {
+    margin-left: 7%;
+}
+
         
 #setbutton {
 	box-shadow:inset 0px 0px 0px 1px #f2f2f2;
@@ -211,6 +215,7 @@ box-shadow: 10px 0px 15px 0px #000000;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 3px 6px #454545;
+    margin-left: 135px;
 }
 #setbutton:hover {
 	background:linear-gradient(to bottom, #ffffff 5%, #b3bdb6 100%);
@@ -222,8 +227,12 @@ box-shadow: 10px 0px 15px 0px #000000;
 }
 
 .starter {
-    margin-left: 50%;
+    margin-left: 210%;
     
+}
+
+#fightButtonIcon{
+    margin-left: 55%;
 }
 
 
@@ -245,4 +254,132 @@ body {
     background-size: 100%;
     background-color: #cccccc;
     
+}
+
+form {
+    width: 10%;
+    margin-left: 2%;
+}
+
+/* Style inputs */
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    width:100%;
+    background-color: #99aa04;
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Add a background color to the submit button on mouse-over */
+  input[type=submit]:hover {
+    background-color: #a09d45;
+  }
+
+#playerTwoName {
+    text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: Verdana;
+    color: blue;
+}
+
+#playerOneName {
+    text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: Verdana;
+    color: red;
+}
+
+#playerTwoDesc {
+    font-size: 20px;
+    font-family: Verdana;
+    color: rgb(46, 46, 255);
+    font-weight: bolder;
+}
+
+#playerOneDesc {
+    font-size: 20px;
+    font-family: Verdana;
+    color: rgb(255, 23, 23);
+    font-weight: bolder;
+}
+
+#cloud {
+    width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    
+}
+
+#container {
+    position: relative;
+    text-align: left;
+    color: white;
+    font-family: Verdana;
+    text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0), -2px 2px 0px  rgb(0, 0, 0);
+}
+
+#text-container {
+    position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+}
+
+#appear {
+    height: 27px;
+    margin-left: 10px;
+    font-size: larger;
+    border-radius: 50%;
+    margin-top: 8%;
+}
+
+#newcombat {
+    margin-left: 37%;
+}
+
+
+#combatbttn {
+	box-shadow:inset 0px 0px 0px 1px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 3px 6px #b23e35;
+}
+#combatbttn:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+#combatbttn:active {
+	position:relative;
+	top:1px;
+}
+
+.mapheader {
+    color:white;
+    font-size: larger;
+    margin-left: 50%;
+    font-family: Verdana;
+    margin-bottom: 0;
 }

@@ -29,20 +29,12 @@
       "desc": "A saiyan from planet Vegeta that punches things."
     },
     {
-      "id": 5,
-      "name": "Ein",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
-      "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
-      "desc": "A corgi that had his intelligence enhanced in a research facility."
-    },
-    {
       "name": "Vegeta",
       "image": "https://c4.wallpaperflare.com/wallpaper/506/983/703/dragon-ball-dragon-ball-z-vegeta-dragon-ball-wallpaper-preview.jpg",
       "face": "https://ih1.redbubble.net/image.1070861259.8846/pp,840x830-pad,1000x1000,f8f8f8.jpg",
       "desc": "Prince Vegeta from Vegeta",
       "id": 7
-    }
-,
+    },
     {
       "name": "Sailor Moon",
       "image": "https://thumb.spokesman.com/rAgmwM5fNZfV6BHaYkuZ8tR6BZk=/media.spokesman.com/photos/2020/09/09/SailorMoonMainImage.png",
@@ -50,9 +42,7 @@
       "likes": "0",
       "desc": "Shes got the boom ",
       "id": 9
-    }
-
-,
+    },
     {
       "name": "One Punch Man",
       "image": "https://www.pngarea.com/pngm/692/4915340_one-punch-man-ok-png-one-punch-man.png",
@@ -60,8 +50,7 @@
       "likes": "0",
       "desc": "Regular Guy",
       "id": 10
-    }
-,
+    },
     {
       "name": "Canti",
       "image": "https://img.sharetv.com/shows/characters/large/flcl.canti.jpg",
@@ -69,8 +58,21 @@
       "likes": "0",
       "desc": "Robot that is bad at daily tasks",
       "id": 11
+    },
+    {
+      "name": "James",
+      "image": "https://i.imgur.com/0T1sz94.png",
+      "face": "https://i.imgur.com/QMud4GE.png",
+      "desc": "No",
+      "id": 12
+    },
+    {
+      "name": "Garret",
+      "image": "https://i.imgur.com/YQAcg8b.png",
+      "face": "https://i.imgur.com/PcOZ9Wx.png",
+      "desc": "No",
+      "id": 13
     }
-
   ],
   "maps": [
     {
