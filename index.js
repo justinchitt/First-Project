@@ -28,6 +28,7 @@ function renderCharacter(character, playerName, playerDesc, playerImg, color, id
     let imgChar = document.createElement('img')
     let descHolder = document.createElement('div')
     name.textContent = character.name
+    name.style.backgroundColor = "white"
     imgChar.src = character.face
     let charCard = document.createElement('div')
     includeEvent(charCard, name, descHolder, imgChar, character,  playerName, playerDesc, playerImg, color,)
@@ -69,6 +70,15 @@ function hideDesc(descHolder, charCard, name) {
     name.style.backgroundColor = "#E9E7E7"
 }
 
+function showForm() {
+    form.style.display = "none"
+    document.getElementById('appear').addEventListener('click', changeDisplay)
+}
+
+function changeDisplay() {
+    form.style.display = "block"
+}
+
 function postCharacter() {
     
     form.addEventListener("submit", (e)=> {
@@ -94,6 +104,7 @@ function byeForm() {
 
 function removeForm() {
     form.remove()
+    document.getElementById('appear').remove()
 }
 
 function postNewCharacter(object) {
@@ -111,6 +122,7 @@ function postNewCharacter(object) {
 function start() {
     let bttn = document.createElement('button')
     bttn.textContent = 'START'
+    showForm()
     // bttn.style.color = 'red';
     bttn.id = 'startbutton';
     bttn.addEventListener('click', init)
@@ -149,9 +161,9 @@ function handleSelect(e, button, map) {
     document.getElementById('vsContainer').id = 'newVsContainer'
     fightBttn.textContent = "FIGHT"
     fightBttn.id = 'fightButtonIcon'
-    fightBttn.className = 'starter';
     let mapName = document.createElement('h2')
     mapName.textContent = map.name
+    mapName.className = 'mapheader'
     button.remove();
     document.getElementById('ready-fightbtn').append(fightBttn, mapName)
     fightBttn.addEventListener('click',startFight)
@@ -164,7 +176,8 @@ function startFight(){
     document.getElementById('newVsContainer').remove()
     let combat = document.createElement('button');
     combat.textContent = 'TUSSLE'
-    document.getElementById('combatbutton').append(combat);
+    combat.id = 'combatbttn'
+    document.getElementById('newcombat').append(combat);
     combat.addEventListener('click', tussle)
 }
 
@@ -172,6 +185,7 @@ function deleteStuff() {
     document.getElementById('image-line').replaceChildren()
     document.getElementById('image-line-bottom').replaceChildren()
     document.getElementById('map').replaceChildren()
+    document.getElementById('appear').remove()
     form.replaceChildren()
 }
 
