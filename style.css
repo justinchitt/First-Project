@@ -1,6 +1,61 @@
 body, html {
     height: 100%;
+    margin:0;
   }
+
+#startbutton {
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: 500%;
+    font-family: 'Lucida Handwriting';
+    /* position:absolute; */
+    margin-left:40%;
+    margin-top:20%;
+}
+
+#everything {
+    margin:3%;
+}
+
+#fightButtonIcon {
+	box-shadow:inset 0px 0px 0px 1px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	background-color:#fe1a00;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 3px 6px #b23e35;
+}
+#fightButtonIcon:hover {
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	background-color:#ce0100;
+}
+#fightButtonIcon:active {
+	position:relative;
+	top:1px;
+}
+
+
+#image-line-bottom .charCard{
+    background: rgb(0,21,97);
+background: linear-gradient(0deg, rgba(0,21,97,1) 7%, rgba(49,85,255,1) 77%);
+box-shadow: 10px 0px 15px 0px #000000;
+}
+
+#image-line .charCard{
+    background: rgb(187,62,62);
+    background: linear-gradient(0deg, rgba(187,62,62,1) 11%, rgba(176,7,7,1) 85%);
+   box-shadow: 10px 0px 15px 0px #000000;
+   }
+
+
   
 #bg {
     /* The image used */
@@ -14,6 +69,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   #map {
     display: flex;
     overflow-x: auto;
@@ -37,6 +93,7 @@ body, html {
     overflow-x: auto;
     margin: 1rem 0;
     max-width: calc(100vw - 2rem);
+    
     /* border-style: outset; */
     
 }
@@ -46,6 +103,7 @@ body, html {
     margin-right: 0.9rem;
     border: 3px solid;
     border-radius: 50%; 
+    background-color: white;
     
     
     
@@ -65,6 +123,7 @@ body, html {
 
 #image-line {
     display: flex;
+    box-shadow:
     overflow-x: auto;
     margin: 1rem 0;
     max-width: calc(100vw - 2rem);
@@ -77,6 +136,7 @@ body, html {
     margin-right: 0.9rem;
     border: 3px solid;
     border-radius: 50%; 
+    background-color: white
       
 }
 
@@ -96,21 +156,93 @@ body, html {
 
 #versus {
     border-radius: 50%;
+    box-shadow: 10px 10px 15px 0px #000000;  
+}
+
+#vsContainer{
+    margin-left: 35%;
+    margin-right: 50%
+}
+
+#two {
+    margin-left: 12%;
+}
+
+#newVsContainer{
+    margin-left:23%;
+}
+
+#readybutton {
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 3px 6px #454545;
+}
+#readybutton:hover {
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	background-color:#68a54b;
+}
+#readybutton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+#setbutton {
+	box-shadow:inset 0px 0px 0px 1px #f2f2f2;
+	background:linear-gradient(to bottom, #b3bdb6 5%, #ffffff 100%);
+	background-color:#b3bdb6;
+	border:1px solid #bfbfbf;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 3px 6px #454545;
+}
+#setbutton:hover {
+	background:linear-gradient(to bottom, #ffffff 5%, #b3bdb6 100%);
+	background-color:#ffffff;
+}
+#setbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.starter {
+    margin-left: 50%;
     
 }
+
 
 #favorite {
     position: relative;
     display:flex;
-    justify-content: center;
+    margin: 2%
+    /* justify-content: center; */
 }
 #favorite img {
     height: 350px;
     border: 3px solid;
-    margin-right: 10em;
+    /* margin-right: 10em; */
     
 }
 
 body {
-    background-color:burlywood;
+    background-image: url("https://wallpaperaccess.com/full/1118941.jpg");
+    background-size: 100%;
+    background-color: #cccccc;
+    
 }

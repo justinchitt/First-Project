@@ -39,7 +39,8 @@ function includeEvent(charCard, name, descHolder, imgChar, character, playerName
     charCard.addEventListener('mouseout', () => hideDesc(descHolder, charCard, name))
     charCard.addEventListener('click',() => playerChoice(character, playerName, playerDesc, playerImg))
     charCard.addEventListener("click", () => changeBorder(charCard, color))
-    charCard.style.backgroundColor = "#E9E7E7"
+    charCard.className = 'charCard'
+    
     charCard.append(imgChar, name)
 }
 
@@ -110,11 +111,8 @@ function postNewCharacter(object) {
 function start() {
     let bttn = document.createElement('button')
     bttn.textContent = 'START'
-    bttn.style.backgroundColor = 'transparent';
-    bttn.style.border = 'none';
-    bttn.style.fontSize = '500%';
-    bttn.style.fontFamily =  'Lucida Handwriting';
-    bttn.style.color = 'red';
+    // bttn.style.color = 'red';
+    bttn.id = 'startbutton';
     bttn.addEventListener('click', init)
     document.getElementById('bg').appendChild(bttn)
 }
@@ -125,13 +123,18 @@ function getMaps() {
     .then(maps =>{
         let button = document.createElement('button')
         button.textContent = "READY"
+        button.id = 'readybutton'
+        button.className ='starter'
     maps.forEach((map) => renderMaps(map, button))})
 }
 
 function renderMaps(map, button) {
     let img = document.createElement('img')
     img.src = map.image
-    button.addEventListener('click', () => handleMap(img, button, map))
+    button.addEventListener('click', () => {
+        button.textContent = "SET";
+        button.id = 'setbutton' 
+        handleMap(img, button, map)})
     document.getElementById('ready-fightbtn').append(button)
 }
 
@@ -143,7 +146,10 @@ function handleSelect(e, button, map) {
     let replace = document.getElementById("versus")
     replace.src = e.target.src
     let fightBttn = document.createElement('button')
+    document.getElementById('vsContainer').id = 'newVsContainer'
     fightBttn.textContent = "FIGHT"
+    fightBttn.id = 'fightButtonIcon'
+    fightBttn.className = 'starter';
     let mapName = document.createElement('h2')
     mapName.textContent = map.name
     button.remove();
@@ -155,7 +161,7 @@ function startFight(){
     deleteStuff()
     let arena = document.getElementById('versus').src
     document.body.style.backgroundImage = `url(${arena})`;
-    document.getElementById('vsContainer').remove()
+    document.getElementById('newVsContainer').remove()
     let combat = document.createElement('button');
     combat.textContent = 'TUSSLE'
     document.getElementById('combatbutton').append(combat);
