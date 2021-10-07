@@ -169,7 +169,6 @@ function handleSelect(e, button, img) {
 }
 
 function startFight(){
-    deleteStuff()
     let arena = document.getElementById('versus').src
     document.body.style.backgroundImage = `url(${arena})`;
     document.getElementById('newVsContainer').remove()
@@ -179,6 +178,7 @@ function startFight(){
     document.getElementById('newcombat').append(combat);
     combat.addEventListener('click',()=> tussle(combat))
     barsPopUp();
+    deleteStuff()
 }
 
 function barsPopUp(){
@@ -200,7 +200,7 @@ function deleteStuff() {
     document.getElementById('image-line-bottom').replaceChildren()
     document.getElementById('map').replaceChildren()
     document.getElementById('appear').remove()
-    form.replaceChildren()
+    form.remove()
     document.getElementById('subheader').remove()
 }
 
