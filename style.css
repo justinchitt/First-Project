@@ -8,7 +8,7 @@ body, html {
     background-color: transparent;
     border: none;
     font-size: 500%;
-    font-family: 'Lucida Handwriting';
+    font-family: lucida handwritting;
     /* position:absolute; */
     margin-left:40%;
     margin-top:20%;
@@ -32,6 +32,7 @@ body, html {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 3px 6px #b23e35;
+    box-shadow: 10px 10px 15px 0px #000000; 
 }
 #fightButtonIcon:hover {
 	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
@@ -186,6 +187,7 @@ box-shadow: 10px 0px 15px 0px #000000;
 	padding:6px 24px;
 	text-decoration:none;
     text-shadow:0px 3px 6px #454545;
+    box-shadow: 10px 10px 15px 0px #000000; 
 }
 #readybutton:hover {
 	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
@@ -216,6 +218,7 @@ box-shadow: 10px 0px 15px 0px #000000;
 	text-decoration:none;
 	text-shadow:0px 3px 6px #454545;
     margin-left: 135px;
+    box-shadow: 10px 10px 15px 0px #000000; 
 }
 #setbutton:hover {
 	background:linear-gradient(to bottom, #ffffff 5%, #b3bdb6 100%);
@@ -290,14 +293,14 @@ input[type=text], select {
   }
 
 #playerTwoName {
-    text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0);
+    text-shadow: 2px 2px #000000;
     font-size: 40px;
     font-family: Verdana;
     color: blue;
 }
 
 #playerOneName {
-    text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0);
+    text-shadow: 2px 2px #000000;    
     font-size: 40px;
     font-family: Verdana;
     color: red;
@@ -306,29 +309,30 @@ input[type=text], select {
 #playerTwoDesc {
     font-size: 20px;
     font-family: Verdana;
-    color: rgb(46, 46, 255);
+    color: rgb(255, 255, 255);
     font-weight: bolder;
+    text-shadow: 2px 2px #000000;
 }
 
 #playerOneDesc {
     font-size: 20px;
     font-family: Verdana;
-    color: rgb(255, 23, 23);
+    color: rgb(255, 255, 255);
     font-weight: bolder;
+    text-shadow: 2px 2px #000000;
 }
 
 #cloud {
     width: 600px;
     height: auto;
     margin-bottom: 20px;
-    
 }
 
 #container {
     position: relative;
     text-align: left;
     color: white;
-    font-family: Verdana;
+    font-family: 'Lucida Handwriting';
     text-shadow: 2px 2px 0px  rgb(0, 0, 0), -2px -2px 0px  rgb(0, 0, 0), 2px -2px 0px  rgb(0, 0, 0), -2px 2px 0px  rgb(0, 0, 0);
 }
 
@@ -344,7 +348,8 @@ input[type=text], select {
     margin-left: 10px;
     font-size: larger;
     border-radius: 50%;
-    margin-top: 8%;
+    margin-top: 6%;
+    box-shadow: 10px 10px 15px 0px #000000; 
 }
 
 #newcombat {
@@ -366,6 +371,7 @@ input[type=text], select {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 3px 6px #b23e35;
+    box-shadow: 10px 10px 15px 0px #000000; 
 }
 #combatbttn:hover {
 	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
@@ -376,10 +382,43 @@ input[type=text], select {
 	top:1px;
 }
 
-.mapheader {
+#mapheader {
     color:white;
-    font-size: larger;
-    margin-left: 50%;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 42%;
     font-family: Verdana;
     margin-bottom: 0;
+    text-shadow: 2px 2px #000000;
+}
+
+#favorite img {
+    box-shadow: 10px 10px 15px 0px #000000; 
+}
+
+#everything {
+    zoom: 90%;
+}
+
+#newgame {
+	box-shadow:inset 0px 0px 0px 1px #f2f2f2;
+	background:linear-gradient(to bottom, #b3bdb6 5%, #ffffff 100%);
+	background-color:#b3bdb6;
+	border:1px solid #bfbfbf;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:19px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 3px 6px #454545;
+    margin-left: 0px;
+    box-shadow: 10px 10px 15px 0px #000000;
+    margin-bottom: 1px;
+}
+
+#newcombat {
+    margin-left: 20%;
 }
