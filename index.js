@@ -8,6 +8,16 @@ let newDesc = document.getElementById('desc')
 
 start()
 
+function start() {
+    let bttn = document.createElement('button')
+    bttn.textContent = 'START'
+    document.getElementById('everything').style.display = "none"
+    showForm()
+    bttn.id = 'startbutton';
+    bttn.addEventListener('click', init)
+    document.getElementById('bg').appendChild(bttn)
+}
+
 function init(e) {
     getCharacters(urlCharacters)
     document.getElementById('everything').style.display = "block"
@@ -34,7 +44,7 @@ function renderCharacter(character, playerName, playerDesc, playerImg, color, id
     name.style.backgroundColor = "white"
     imgChar.src = character.face
     let charCard = document.createElement('div')
-    includeEvent(charCard, name, descHolder, imgChar, character,  playerName, playerDesc, playerImg, color,)
+    includeEvent(charCard, name, descHolder, imgChar, character,  playerName, playerDesc, playerImg, color)
     document.getElementById(id).append(charCard)
 }
 
@@ -44,7 +54,6 @@ function includeEvent(charCard, name, descHolder, imgChar, character, playerName
     charCard.addEventListener('click',() => playerChoice(character, playerName, playerDesc, playerImg))
     charCard.addEventListener("click", () => changeBorder(charCard, color))
     charCard.className = 'charCard'
-    
     charCard.append(imgChar, name)
 }
 
@@ -58,12 +67,11 @@ function changeBorder(charCard, color) {
     clickFunctionBacktoNormal()
     charCard.style.border = "12px solid"
     charCard.style.borderColor = color
-    
 }
 
-function playerChoice (character, name, desc, img){
+function playerChoice (character, playerName, desc, img){
     let fighterOneImg = document.getElementById(img);
-    document.getElementById(name).textContent = character.name;
+    document.getElementById(playerName).textContent = character.name;
     document.getElementById(desc).textContent = character.desc;
     fighterOneImg.src = character.image
 }
@@ -84,22 +92,21 @@ function changeDisplay() {
 }
 
 function postCharacter() {
-    
-    form.addEventListener("submit", (e)=> {
-    e.preventDefault()
+    form.addEventListener("submit", (e)=> handleSubmit(e))
+    form.reset()
+}
 
+function handleSubmit(e) {
+    e.preventDefault()
     let newObj = {
         name: newName.value,
         image: newImage.value,
         face: newFace.value,
         desc: newDesc.value
     }
-
-    renderCharacter(newObj, newObj.name, newObj.desc, newObj.image, "red", "image-line")
-    renderCharacter(newObj, newObj.name, newObj.desc, newObj.image, "blue", "image-line-bottom")
+    renderCharacter(newObj,'playerOneName', 'playerOneDesc', 'fighterone', "red", "image-line")
+    renderCharacter(newObj, 'playerTwoName', 'playerTwoDesc', 'fightertwo', "blue", "image-line-bottom")
     postNewCharacter(newObj)
-    })
-    form.reset()
 }
 
 function byeForm() {
@@ -112,7 +119,6 @@ function removeForm() {
 }
 
 function postNewCharacter(object) {
-    console.log(object)
     fetch(urlCharacters, {
         method: 'POST',
         headers: {
@@ -120,17 +126,6 @@ function postNewCharacter(object) {
         },
         body:JSON.stringify(object)
         })
-}
-
-
-function start() {
-    let bttn = document.createElement('button')
-    bttn.textContent = 'START'
-    document.getElementById('everything').style.display = "none"
-    showForm()
-    bttn.id = 'startbutton';
-    bttn.addEventListener('click', init)
-    document.getElementById('bg').appendChild(bttn)
 }
 
 function getMaps() {
@@ -151,26 +146,23 @@ function renderMaps(map, button) {
     button.addEventListener('click', () => {
         button.textContent = "SET";
         button.id = 'setbutton' 
-        handleMap(img, button, map)})
+        handleMap(img, button)
+    })
     document.getElementById('ready-fightbtn').append(button)
 }
-function handleMap(img,button, map) {
-    img.addEventListener('click', (e) => handleSelect(e,button, map, img))
+
+function handleMap(img, button) {
+    img.addEventListener('click', (e) => handleSelect(e,button, img))
     document.getElementById('map').append(img)
 }
-function handleSelect(e, button, map, img) {
+function handleSelect(e, button, img) {
     let replace = document.getElementById("versus")
     replace.src = e.target.src
     let fightBttn = document.createElement('button')
     document.getElementById('mapheader').textContent = img.alt;
-    console.log(img.alt)
     document.getElementById('vsContainer').id = 'newVsContainer'
     fightBttn.textContent = "FIGHT"
     fightBttn.id = 'fightButtonIcon'
-    // let mapName = document.createElement('h2')
-    // mapName.id = 'mapheader'
-    // console.log(map.name)
-    // mapName.innerText = map.name
     button.remove();
     document.getElementById('ready-fightbtn').append(fightBttn)
     fightBttn.addEventListener('click',startFight)
@@ -194,14 +186,13 @@ function barsPopUp(){
     document.getElementsByClassName('bars')[1].style.display = 'block';
     document.getElementsByClassName('bars')[2].style.display = 'block';
     document.getElementsByClassName('bars')[3].style.display = 'block';
-    
 }
 
 function clickFunctionBacktoNormal(){
     let cards = document.getElementsByClassName('charCard')
     for (const card of cards) {
         card.style.border = 'none';
-      }   
+    }
 }
 
 function deleteStuff() {
@@ -214,7 +205,6 @@ function deleteStuff() {
 }
 
 function tussle(combat){
-    game()
     let newGame = document.createElement('button');
     combat.style.display = "none"
     newGame.textContent = 'START NEW GAME'; 
@@ -222,7 +212,7 @@ function tussle(combat){
     newGame.addEventListener('click',startNewGame)
     document.getElementById('combatbutton').replaceChildren();
     document.getElementById('newcombat').append(newGame);
-    
+    game()
 };
 
 function game() {
@@ -231,16 +221,17 @@ function game() {
     let prob1 = Math.floor(Math.random() * 2) +1;
     let prob2 = Math.floor(Math.random() * 2) +1;
     if( prob1 === prob2){
-        document.getElementById('healthbartwo').style.background = "red";
-        document.getElementById('HP2').textContent = "HP: 0";
-        document.getElementById('fightertwo').src = 'https://i.imgur.com/17Ntd93.png';
-        alert(`${playerOne} Won`);
+        handleWin('healthbartwo', 'HP2', 'fightertwo', playerOne);
     }else{
-        document.getElementById('healthbarone').style.background = "red";
-        document.getElementById('HP1').textContent = "HP: 0";
-        document.getElementById('fighterone').src = 'https://i.imgur.com/17Ntd93.png';
-        alert(`${playerTwo} Won`);
+        handleWin('healthbarone', 'HP1', 'fighterone', playerTwo);
     }
+}
+
+function handleWin(health, text, location, player) {
+    document.getElementById(health).style.background = "red";
+    document.getElementById(text).textContent = "HP: 0";
+    document.getElementById(location).src = 'https://i.imgur.com/17Ntd93.png';
+    alert(`${player} Won`);
 }
 
 function startNewGame(){

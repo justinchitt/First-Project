@@ -46,7 +46,6 @@
       "name": "Sailor Moon",
       "image": "https://thumb.spokesman.com/rAgmwM5fNZfV6BHaYkuZ8tR6BZk=/media.spokesman.com/photos/2020/09/09/SailorMoonMainImage.png",
       "face": "https://animeandgameembroidery.com/wp-content/uploads/2020/10/sailor-moon-head.jpg",
-      "likes": "0",
       "desc": "Shes got the boom ",
       "id": 9
     },
@@ -57,12 +56,10 @@
       "desc": "Beep boop beep",
       "id": 12
     },
-    
     {
       "name": "One Punch Man",
       "image": "https://www.pngarea.com/pngm/692/4915340_one-punch-man-ok-png-one-punch-man.png",
       "face": "https://www.pngkit.com/png/detail/146-1460346_one-punch-man-head.png",
-      "likes": "0",
       "desc": "Regular Guy",
       "id": 10
     },
@@ -70,7 +67,6 @@
       "name": "Canti",
       "image": "https://img.sharetv.com/shows/characters/large/flcl.canti.jpg",
       "face": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/448a6f28-3fa5-425d-ae65-46712bb54059/d2emvb1-fb3818c5-75b2-4235-bcdc-8b4a40289dc4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDQ4YTZmMjgtM2ZhNS00MjVkLWFlNjUtNDY3MTJiYjU0MDU5XC9kMmVtdmIxLWZiMzgxOGM1LTc1YjItNDIzNS1iY2RjLThiNGE0MDI4OWRjNC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.T5uNhGkU-6Klv_FHEW4UIQpff9-cHsiyMJfiJ_mcL0c",
-      "likes": "0",
       "desc": "Robot that is bad at daily tasks",
       "id": 11
     },
@@ -79,7 +75,6 @@
       "name": "Ein",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
       "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
-      "likes": "0",
       "desc": "A dog?"
     }
   ],
