@@ -147,6 +147,7 @@ function getMaps() {
 function renderMaps(map, button) {
     let img = document.createElement('img')
     img.src = map.image
+    img.alt = map.name
     button.addEventListener('click', () => {
         button.textContent = "SET";
         button.id = 'setbutton' 
@@ -154,22 +155,24 @@ function renderMaps(map, button) {
     document.getElementById('ready-fightbtn').append(button)
 }
 function handleMap(img,button, map) {
-    img.addEventListener('click', (e) => handleSelect(e,button, map))
+    img.addEventListener('click', (e) => handleSelect(e,button, map, img))
     document.getElementById('map').append(img)
 }
-function handleSelect(e, button, map) {
+function handleSelect(e, button, map, img) {
     let replace = document.getElementById("versus")
     replace.src = e.target.src
     let fightBttn = document.createElement('button')
+    document.getElementById('mapheader').textContent = img.alt;
+    console.log(img.alt)
     document.getElementById('vsContainer').id = 'newVsContainer'
     fightBttn.textContent = "FIGHT"
     fightBttn.id = 'fightButtonIcon'
-    let mapName = document.createElement('h2')
-    mapName.id = 'mapheader'
-    console.log(map.name)
-    mapName.innerText = map.name
+    // let mapName = document.createElement('h2')
+    // mapName.id = 'mapheader'
+    // console.log(map.name)
+    // mapName.innerText = map.name
     button.remove();
-    document.getElementById('ready-fightbtn').append(fightBttn, mapName)
+    document.getElementById('ready-fightbtn').append(fightBttn)
     fightBttn.addEventListener('click',startFight)
 }
 

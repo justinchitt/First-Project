@@ -11,7 +11,7 @@
       "name": "Garroot",
       "image": "https://i.imgur.com/YQAcg8b.png",
       "face": "https://i.imgur.com/PcOZ9Wx.png",
-      "desc": "GARROOOOT",
+      "desc": "Mother: Earth, Father: Unknown",
       "id": 13
     },
     {
@@ -33,13 +33,13 @@
       "name": "Goku",
       "image": "https://www.wallpaperflare.com/static/610/436/872/dragon-ball-anime-son-goku-white-background-wallpaper.jpg",
       "face": "https://www.pngitem.com/pimgs/m/286-2861864_agar-io-goku-skin-png-download-dragon-ball.png",
-      "desc": "A saiyan from planet Vegeta."
+      "desc": "A Sayian from Vegeta"
     },
     {
       "name": "Vegeta",
       "image": "https://c4.wallpaperflare.com/wallpaper/506/983/703/dragon-ball-dragon-ball-z-vegeta-dragon-ball-wallpaper-preview.jpg",
       "face": "https://ih1.redbubble.net/image.1070861259.8846/pp,840x830-pad,1000x1000,f8f8f8.jpg",
-      "desc": "Prince Vegeta from Vegeta",
+      "desc": " A bit of temper ",
       "id": 7
     },
     {
@@ -80,7 +80,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5DS_c-Ui6QvlZqbnlH9Fwi0EoCwMUz7GTLomwoGBKv3g-swaXaQXniyADlTOP7idUZU&usqp=CAU",
       "face": "https://ih1.redbubble.net/image.550723911.3515/st,small,507x507-pad,600x600,f8f8f8.u3.jpg",
       "likes": "0",
-      "desc": "A corgi that had his intelligence enhanced in a research facility."
+      "desc": "A dog?"
     }
   ],
   "maps": [
