@@ -22,7 +22,7 @@ function getCharacters(url) {
     .then(resp => resp.json())
     .then(characters => {
         characters.forEach((character) => renderCharacter(character, 'playerOneName', 'playerOneDesc', 'fighterone', "red", 'image-line'))
-        characters.forEach((character) => renderCharacter(character, 'playerTwoName', 'playerTwoDesc', 'fightertwo', "blue", 'image-line-bottom'))
+        characters.forEach((character) => renderCharacter(character, 'playerTwoName', 'playerTwoDesc', 'fightertwo', "#001AFF", 'image-line-bottom'))
     })
 }
 
@@ -55,7 +55,8 @@ function showDesc(charCard, descHolder, name) {
 }
 
 function changeBorder(charCard, color) {
-    charCard.style.border = "8px solid"
+    clickFunctionBacktoNormal()
+    charCard.style.border = "12px solid"
     charCard.style.borderColor = color
     
 }
@@ -152,7 +153,6 @@ function renderMaps(map, button) {
         handleMap(img, button, map)})
     document.getElementById('ready-fightbtn').append(button)
 }
-
 function handleMap(img,button, map) {
     img.addEventListener('click', (e) => handleSelect(e,button, map))
     document.getElementById('map').append(img)
@@ -183,6 +183,22 @@ function startFight(){
     combat.id = 'combatbttn'
     document.getElementById('newcombat').append(combat);
     combat.addEventListener('click',()=> tussle(combat))
+    barsPopUp();
+}
+
+function barsPopUp(){
+    document.getElementsByClassName('bars')[0].style.display = 'block';
+    document.getElementsByClassName('bars')[1].style.display = 'block';
+    document.getElementsByClassName('bars')[2].style.display = 'block';
+    document.getElementsByClassName('bars')[3].style.display = 'block';
+    
+}
+
+function clickFunctionBacktoNormal(){
+    let cards = document.getElementsByClassName('charCard')
+    for (const card of cards) {
+        card.style.border = 'none';
+      }   
 }
 
 function deleteStuff() {
@@ -191,6 +207,7 @@ function deleteStuff() {
     document.getElementById('map').replaceChildren()
     document.getElementById('appear').remove()
     form.replaceChildren()
+    document.getElementById('subheader').remove()
 }
 
 function tussle(combat){
@@ -211,8 +228,14 @@ function game() {
     let prob1 = Math.floor(Math.random() * 2) +1;
     let prob2 = Math.floor(Math.random() * 2) +1;
     if( prob1 === prob2){
+        document.getElementById('healthbartwo').style.background = "red";
+        document.getElementById('HP2').textContent = "HP: 0";
+        document.getElementById('fightertwo').src = 'https://i.imgur.com/17Ntd93.png';
         alert(`${playerOne} Won`);
     }else{
+        document.getElementById('healthbarone').style.background = "red";
+        document.getElementById('HP1').textContent = "HP: 0";
+        document.getElementById('fighterone').src = 'https://i.imgur.com/17Ntd93.png';
         alert(`${playerTwo} Won`);
     }
 }
