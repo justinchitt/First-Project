@@ -8,15 +8,76 @@ body, html {
     background-color: transparent;
     border: none;
     font-size: 500%;
-    font-family: lucida handwritting;
+    font-family: 'Lucida Handwriting',curvise;
     /* position:absolute; */
     margin-left:40%;
     margin-top:20%;
 }
 
+
+
 #everything {
     margin:3%;
 }
+
+#HP1 {
+    height:20px;
+        width: 53px;
+        background-color: rgb(255, 255, 255);
+        margin-left:2%;
+        font-weight: bolder;
+        padding-top: 0.9%;
+        padding-top: 0.9%;
+        padding-left:0.3%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display:none;
+}
+
+
+
+#HP2 { 
+    height:20px;
+        width: 53px;
+        background-color: rgb(255, 255, 255);
+        margin-left:2%;
+        font-weight: bolder;
+        padding-top: 0.9%;
+        padding-left:0.3%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display:none;
+}
+
+#healthbartwo{
+        height:30px;
+        width: 100%;
+        border-style: solid;
+        border-color: white;
+        border-width:10%;
+        background: rgb(0,97,0);
+        background: linear-gradient(90deg, rgba(0,97,0,1) 0%, rgba(41,156,39,1) 30%, rgba(41,218,38,1) 54%, rgba(49,255,80,1) 79%);
+         border-radius: 15px;
+         margin-bottom:5%;
+         box-shadow: 10px 10px 15px 0px #000000; 
+         display:none; 
+}
+
+#healthbarone{
+    height: 30px;
+    width: 100%;
+    border-style: solid;
+    border-color: white;
+    border-width:10%;
+    background: rgb(0,97,0);
+    background: linear-gradient(90deg, rgba(0,97,0,1) 0%, rgba(41,156,39,1) 30%, rgba(41,218,38,1) 54%, rgba(49,255,80,1) 79%);
+    border-radius: 15px;
+    margin-bottom:5%;
+    box-shadow: 10px 10px 15px 0px #000000;  
+    display:none;
+}
+
+
 
 #fightButtonIcon {
 	box-shadow:inset 0px 0px 0px 1px #f29c93;
@@ -41,6 +102,10 @@ body, html {
 #fightButtonIcon:active {
 	position:relative;
 	top:1px;
+}
+
+#vegeta{
+    transform: scaleX(-1);
 }
 
 
@@ -138,7 +203,6 @@ box-shadow: 10px 0px 15px 0px #000000;
     border: 3px solid;
     border-radius: 50%; 
     background-color: white
-      
 }
 
 #image-line h2 {
