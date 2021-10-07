@@ -6,8 +6,11 @@ let newImage = document.getElementById('image')
 let newFace = document.getElementById('face')
 let newDesc = document.getElementById('desc')
 
+start()
+
 function init(e) {
     getCharacters(urlCharacters)
+    document.getElementById('everything').style.display = "block"
     getMaps()
     postCharacter()
     byeForm()
@@ -122,8 +125,8 @@ function postNewCharacter(object) {
 function start() {
     let bttn = document.createElement('button')
     bttn.textContent = 'START'
+    document.getElementById('everything').style.display = "none"
     showForm()
-    // bttn.style.color = 'red';
     bttn.id = 'startbutton';
     bttn.addEventListener('click', init)
     document.getElementById('bg').appendChild(bttn)
@@ -162,8 +165,9 @@ function handleSelect(e, button, map) {
     fightBttn.textContent = "FIGHT"
     fightBttn.id = 'fightButtonIcon'
     let mapName = document.createElement('h2')
-    mapName.textContent = map.name
-    mapName.className = 'mapheader'
+    mapName.id = 'mapheader'
+    console.log(map.name)
+    mapName.innerText = map.name
     button.remove();
     document.getElementById('ready-fightbtn').append(fightBttn, mapName)
     fightBttn.addEventListener('click',startFight)
@@ -178,7 +182,7 @@ function startFight(){
     combat.textContent = 'TUSSLE'
     combat.id = 'combatbttn'
     document.getElementById('newcombat').append(combat);
-    combat.addEventListener('click', tussle)
+    combat.addEventListener('click',()=> tussle(combat))
 }
 
 function deleteStuff() {
@@ -189,13 +193,15 @@ function deleteStuff() {
     form.replaceChildren()
 }
 
-function tussle(){
+function tussle(combat){
     game()
     let newGame = document.createElement('button');
+    combat.style.display = "none"
     newGame.textContent = 'START NEW GAME'; 
+    newGame.id='newgame'
     newGame.addEventListener('click',startNewGame)
     document.getElementById('combatbutton').replaceChildren();
-    document.getElementById('combatbutton').append(newGame);
+    document.getElementById('newcombat').append(newGame);
     
 };
 
@@ -214,7 +220,3 @@ function game() {
 function startNewGame(){
     location.reload() 
 }
-
-
-
-start()
